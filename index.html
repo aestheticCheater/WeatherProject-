@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Weather App</title>
+  </head>
+  <body>
+    <style>
+body {background: rgb(63,94,251);
+background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(23,0,5,1) 100%);}
+label {
+font-size:1.5rem;
+color:#FFF8DC;
+}
+input{
+  width: 15%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+button {
+	box-shadow: 0px 1px 0px 0px #f0f7fa;
+	background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+	background-color:#33bdef;
+	border-radius:15px;
+	border:1px solid #057fd0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #5b6178;
+}
+button:hover {
+	background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+	background-color:#019ad2;
+}
+button:active {
+	position:relative;
+	top:1px;
+}
+
+h1{
+font-family: "Comic Sans MS", cursive, sans-serif;
+font-size: 36px;
+letter-spacing: -0.2px;
+word-spacing: -5px;
+color: #85B5FF;
+font-weight: 700;
+text-decoration: none solid rgb(68, 68, 68);
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+}
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+</style>
+    <center>
+      <h1>Weather application!</h1>
+      <p style="color:#FFF8DC">
+        <em>This weather app is used to give users information about the weather in the respective city they are interested in!<br>
+            You can look for every city in the world, just dont include the country or region in<br>
+            (example: Varna)
+        </em>
+      </p>
+    <form action="/" method="post">
+      <label for="cityInput"><strong>City Name: </strong></label><br>
+  <input id = cityInput type="text" name="cityName">
+  <br>
+  <button type="submit">Search</button>
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+    <footer >
+       👑 <strong>vpopazovwork@abv.bg</strong> 👑
+    </footer>
+  </center>
+  </body>
+</html>
