@@ -2,7 +2,16 @@ const express = require("express");
 const https = require("https");
 const bodyParser = require("body-parser");
 const app = express();
+let date_ob = new Date();
+// current date
 
+// current hours
+var hours = date_ob.getHours();
+
+// current minutes
+var minutes = date_ob.getMinutes();
+
+console.log(hours + ":" + minutes);
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/", function(req, res){
@@ -22,9 +31,10 @@ app.post("/", function(req, res){
       const icon = weatherData.weather[0].icon;
       const description = weatherData.weather[0].description;
       const imageURL = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
-    res.write("<h1>The temperature in " + query + " is: " + temp + " °C at the moment.</h1>");
+    res.write("<h1>The temperature in " + query + " is: " + temp  + " in <em>Celsius</em> at the moment.</h1>" + "<h1>"+ hours + ":" + minutes +"</h1>");
     res.write("<img src =" + imageURL + ">");
      res.write("<center><h2>"+ description +"</h2></center>");
+
     res.send();
     console.log(data);
     })
@@ -32,6 +42,6 @@ app.post("/", function(req, res){
 })
 
 app.listen(process.env.PORT || 3000, function(){
-console.log("Server started at port 3000!");
+console.log("Server started at port 3000!x");
 
 });
